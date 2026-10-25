@@ -18,7 +18,7 @@
 
 ## 📌 Overview
 
-Flatpak & Snap sandbox permission auditor (offline, read-only)
+OFlatSnap — Flatpak & Snap Sandbox Permission Auditor. It provides flatpak metadata parser (system + user installs, `flatpak info --show-permissions` text exports); Override merger — global + per-app, system + user, negation (!) handling, widening detection. Built-in demo/self-test paths and severity gates help validate detections without touching production when those flags are used.
 
 ---
 
@@ -30,11 +30,6 @@ Flatpak & Snap sandbox permission auditor (offline, read-only)
 - Sandbox-escape detection: org.freedesktop.Flatpak, host filesystem, device=all, session/system bus, portal-implementation bypass, devel/ptrace feature
 - EOL runtime database (GNOME / KDE / Freedesktop)
 - Snap auditor — `snap list` / `snap connections` exports, snap.yaml, snapd state.json, sideloaded (--dangerous) revisions, devmode / classic / try
-- 110+ rules: severity, CWE, MITRE ATT&CK, remediation
-- Per-app risk score + overall score, grade A+…F
-- Hardened override templates (flatpak override / keyfile overrides, snap disconnect plans)
-- Exports: TXT / Markdown / JSON / CSV / SARIF 2.1.0
-- --demo self-test, --fail-on gate, --list-rules, --explain, interactive menu, settings persistence
 
 ---
 
@@ -48,7 +43,9 @@ Flatpak & Snap sandbox permission auditor (offline, read-only)
 ## 🚀 Usage
 
 ```bash
-./OFlatSnap
+./OFlatSnap                                     # interactive menu
+./OFlatSnap --demo
+./OFlatSnap --help
 ```
 
 ---
